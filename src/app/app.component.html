@@ -1,0 +1,15 @@
+<h1>Rock, Paper, Scissors</h1>
+<h2>Pick a weapon:</h2>
+<div>
+  <button type="button" (click)="fight('Rock')">Rock</button>
+  <button type="button" (click)="fight('Paper')">Paper</button>
+  <button type="button" (click)="fight('Scissors')">Scissors</button>
+</div>
+<div *ngIf="computerWeapon">
+  <h3>Computer selected: {{ computerWeapon }}</h3>
+</div>
+<div *ngIf="result">
+  <h3 *ngIf="result !== 'Draw'">Winner: {{ result }}</h3>
+  <h3 *ngIf="result === 'Draw'">It's a draw!</h3>
+  <button type="button" (click)="resetGame()">Play again</button>
+</div>
