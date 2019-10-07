@@ -7,28 +7,28 @@ import { GameLogic, GESTURES, Gesture } from "./gameLogic.service";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  playerWeapon: Gesture;
-  computerWeapon: string;
+  playerGesture: Gesture;
+  computerGesture: string;
   result: string;
-  availableWeapons = GESTURES;
+  availableGestures = GESTURES;
 
   constructor(private gameLogic: GameLogic) {}
 
   /**
-   * Sets the player-chosen weapon, randomly selects a weapon for the computer and
+   * Sets the player-chosen gesture, randomly selects a gesture for the computer and
    * determines the winner of the rock-paper-scissors battle.
    */
-  fight(weapon: Gesture) {
-    this.playerWeapon = weapon;
-    this.result = this.gameLogic.determineWinner(this.playerWeapon);
+  fight(gesture: Gesture) {
+    this.playerGesture = gesture;
+    this.result = this.gameLogic.determineWinner(this.playerGesture);
   }
 
   /**
    * Resets the game state for a new round.
    */
   resetGame() {
-    this.playerWeapon = undefined;
-    this.computerWeapon = undefined;
+    this.playerGesture = undefined;
+    this.computerGesture = undefined;
     this.result = undefined;
   }
 }
