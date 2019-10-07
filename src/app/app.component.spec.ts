@@ -17,7 +17,7 @@ describe("AppComponent", () => {
   it(`should have as title 'rps-ng-skeleton'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.availableWeapons).toEqual(["Rock", "Paper", "Scissors"]);
+    expect(app.availableGestures).toEqual(["Rock", "Paper", "Scissors"]);
   });
 
   it("should render title in a h1 tag", () => {

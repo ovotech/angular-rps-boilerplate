@@ -15,7 +15,7 @@ export class GameLogic {
     return "Rock";
   }
 
-  determineWinner(playerWeapon: Gesture): Result {
+  determineWinner(playerGesture: Gesture): Result {
     // TODO: add the required code to determine the winner here.
     const computerGesture = this.generateComputerGesture();
     return "Player";
